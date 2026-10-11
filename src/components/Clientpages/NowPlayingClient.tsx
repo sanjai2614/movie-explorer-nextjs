@@ -25,7 +25,7 @@ export default function NowPlayingClient() {
 
   return (
     <main className="min-h-screen w-full bg-black text-white">
-      <section className="mx-auto w-full max-w-[1500px] px-4 py-7 sm:px-6 sm:py-9 lg:px-8 lg:py-12">
+      <section className="mx-auto w-full max-w-375 px-4 py-7 sm:px-6 sm:py-9 lg:px-8 lg:py-12">
 
         {/* ================= HEADER ================= */}
         <div className="mb-7 sm:mb-9 lg:mb-10">
@@ -56,8 +56,8 @@ export default function NowPlayingClient() {
 
         {/* ================= ERROR ================= */}
         {isError && (
-          <div className="flex min-h-[350px] items-center justify-center px-4 sm:min-h-[450px]">
-            <div className="w-full max-w-md rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-9 text-center backdrop-blur-xl sm:px-8 sm:py-10">
+          <div className="flex min-h-87.5 items-center justify-center px-4 sm:min-h-112.5">
+            <div className="w-full max-w-md rounded-2xl border border-white/10 bg-white/3 px-5 py-9 text-center backdrop-blur-xl sm:px-8 sm:py-10">
 
               <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-red-500/20 bg-red-500/10 text-2xl sm:h-16 sm:w-16 sm:text-3xl">
                 ⚠️
@@ -91,7 +91,7 @@ export default function NowPlayingClient() {
                 </p>
               </div>
 
-              <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-[10px] text-gray-500 sm:px-4 sm:py-2 sm:text-xs">
+              <span className="rounded-full border border-white/10 bg-white/4 px-3 py-1.5 text-[10px] text-gray-500 sm:px-4 sm:py-2 sm:text-xs">
                 {movies.length} Movies
               </span>
             </div>
@@ -138,10 +138,10 @@ export default function NowPlayingClient() {
 
         {/* ================= NO MOVIES ================= */}
         {!isLoading && !isError && movies.length === 0 && (
-          <div className="flex min-h-[350px] items-center justify-center px-4 sm:min-h-[450px]">
+          <div className="flex min-h-87.5 items-center justify-center px-4 sm:min-h-112.5">
             <div className="w-full max-w-md text-center">
 
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] text-2xl sm:h-20 sm:w-20 sm:text-3xl">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-white/4 text-2xl sm:h-20 sm:w-20 sm:text-3xl">
                 🎬
               </div>
 

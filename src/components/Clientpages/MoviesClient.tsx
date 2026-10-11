@@ -37,7 +37,7 @@ export default function MoviesClient() {
 
   return (
     <main className="min-h-screen bg-black text-white">
-      <div className="mx-auto w-full max-w-[1500px] px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
+      <div className="mx-auto w-full max-w-375 px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
         {/* ================= TOP HEADER ================= */}
         <div className="mb-7 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
           <div>
@@ -55,7 +55,7 @@ export default function MoviesClient() {
           </div>
 
           {/* Small Search */}
-          <div className="w-full sm:w-[300px] lg:w-[340px]">
+          <div className="w-full sm:w-75 lg:w-85">
             <SearchBar />
           </div>
         </div>
@@ -93,7 +93,7 @@ export default function MoviesClient() {
               </p>
             </div>
 
-            <div className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs text-gray-500">
+            <div className="rounded-full border border-white/10 bg-white/4 px-3 py-1.5 text-xs text-gray-500">
               {movies.length} results
             </div>
           </div>
@@ -104,7 +104,7 @@ export default function MoviesClient() {
 
         {/* ================= ERROR ================= */}
         {isError && (
-          <div className="flex min-h-[400px] items-center justify-center">
+          <div className="flex min-h-100 items-center justify-center">
             <div className="max-w-sm rounded-2xl border border-red-500/20 bg-red-500/5 px-8 py-10 text-center">
               <div className="mb-4 text-3xl">⚠️</div>
 
@@ -119,9 +119,9 @@ export default function MoviesClient() {
 
         {/* ================= NO RESULTS ================= */}
         {!isLoading && !isError && movies.length === 0 && (
-          <div className="flex min-h-[400px] items-center justify-center">
+          <div className="flex min-h-100 items-center justify-center">
             <div className="max-w-sm text-center">
-              <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] text-2xl">
+              <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-white/4 text-2xl">
                 🎬
               </div>
 
